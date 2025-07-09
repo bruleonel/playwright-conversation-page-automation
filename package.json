@@ -1,0 +1,25 @@
+{
+  "name": "playwright-conversation-page-automation",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes end‑to‑end para página de conversa web, utilizando Playwright e JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "show-report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruleonel/playwright-conversation-page-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruleonel/playwright-conversation-page-automation/issues"
+  },
+  "homepage": "https://github.com/bruleonel/playwright-conversation-page-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2"
+  }
+}
