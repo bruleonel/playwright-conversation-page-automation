@@ -124,6 +124,7 @@ export class ConversationPage {
         await el.fill(email);
         break;
       }
+      await this.page.pause();
     }
 
     const sendEmailButton = frame.locator(
@@ -131,5 +132,6 @@ export class ConversationPage {
     );
     await sendEmailButton.waitFor({ state: "visible" });
     await sendEmailButton.click();
+    await this.page.pause();
   }
 }

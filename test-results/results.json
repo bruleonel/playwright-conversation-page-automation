@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -43,10 +43,42 @@
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "chromium",
         "name": "chromium",
+        "testDir": "C:/gitHub/qa/teste-playwright-conversation-page-automation/playwright-conversation-page-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/gitHub/qa/teste-playwright-conversation-page-automation/playwright-conversation-page-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/gitHub/qa/teste-playwright-conversation-page-automation/playwright-conversation-page-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/gitHub/qa/teste-playwright-conversation-page-automation/playwright-conversation-page-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "webkit",
+        "name": "webkit",
         "testDir": "C:/gitHub/qa/teste-playwright-conversation-page-automation/playwright-conversation-page-automation/tests",
         "testIgnore": [],
         "testMatch": [
@@ -92,7 +124,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17095,
+                      "duration": 73171,
                       "errors": [],
                       "stdout": [
                         {
@@ -101,7 +133,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-09T04:33:02.664Z",
+                      "startTime": "2025-07-09T17:56:34.013Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -113,6 +145,136 @@
               "file": "huggy.spec.js",
               "line": 12,
               "column": 7
+            },
+            {
+              "title": "Fluxo completo de atendimento Huggy",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 45769,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Achou 2 inputs\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-09T17:56:34.049Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a3d9817e300f83b5243a-a51a504b2e0ece431a65",
+              "file": "huggy.spec.js",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "Fluxo completo de atendimento Huggy",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 89325,
+                      "error": {
+                        "message": "Error: locator.waitFor: Error: strict mode violation: getByText('Teste passou') resolved to 2 elements:\n    1) <span aria-label=\"Teste passou\" class=\"powerzap_chat_balloon_inner\">Teste passou</span> aka getByLabel('Teste passou')\n    2) <div class=\"powerzap_last_message\">Teste passou</div> aka getByText('Teste passou').nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByText('Teste passou') to be visible\u001b[22m\n",
+                        "stack": "Error: locator.waitFor: Error: strict mode violation: getByText('Teste passou') resolved to 2 elements:\n    1) <span aria-label=\"Teste passou\" class=\"powerzap_chat_balloon_inner\">Teste passou</span> aka getByLabel('Teste passou')\n    2) <div class=\"powerzap_last_message\">Teste passou</div> aka getByText('Teste passou').nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByText('Teste passou') to be visible\u001b[22m\n\n    at ConversationPage.verifyResponse (C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\pages\\ConversationPage.js:49:41)\n    at C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\tests\\huggy.spec.js:22:5",
+                        "location": {
+                          "file": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\pages\\ConversationPage.js",
+                          "column": 41,
+                          "line": 49
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\ConversationPage.js:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m verifyResponse(expectedText) {\n \u001b[90m 48 |\u001b[39m     \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetIframe()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mgetByText(expectedText)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mpause()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m   }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\pages\\ConversationPage.js",
+                            "column": 41,
+                            "line": 49
+                          },
+                          "message": "Error: locator.waitFor: Error: strict mode violation: getByText('Teste passou') resolved to 2 elements:\n    1) <span aria-label=\"Teste passou\" class=\"powerzap_chat_balloon_inner\">Teste passou</span> aka getByLabel('Teste passou')\n    2) <div class=\"powerzap_last_message\">Teste passou</div> aka getByText('Teste passou').nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByText('Teste passou') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\ConversationPage.js:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m verifyResponse(expectedText) {\n \u001b[90m 48 |\u001b[39m     \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetIframe()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mgetByText(expectedText)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mpause()\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m   }\n \u001b[90m 52 |\u001b[39m\u001b[0m\n\u001b[2m    at ConversationPage.verifyResponse (C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\pages\\ConversationPage.js:49:41)\u001b[22m\n\u001b[2m    at C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\tests\\huggy.spec.js:22:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-09T17:56:34.039Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\test-results\\huggy-Desafio-Huggy---Conv-5c0bb-mpleto-de-atendimento-Huggy-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\test-results\\huggy-Desafio-Huggy---Conv-5c0bb-mpleto-de-atendimento-Huggy-webkit\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\pages\\ConversationPage.js",
+                        "column": 41,
+                        "line": 49
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 51435,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Achou 2 inputs\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-07-09T17:58:04.949Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\gitHub\\qa\\teste-playwright-conversation-page-automation\\playwright-conversation-page-automation\\test-results\\huggy-Desafio-Huggy---Conv-5c0bb-mpleto-de-atendimento-Huggy-webkit-retry1\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "a3d9817e300f83b5243a-ebee17e02b7d7f727fee",
+              "file": "huggy.spec.js",
+              "line": 12,
+              "column": 7
             }
           ]
         }
@@ -121,11 +283,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-09T04:33:01.638Z",
-    "duration": 19547.273,
-    "expected": 1,
+    "startTime": "2025-07-09T17:56:33.046Z",
+    "duration": 143819.478,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 1
   }
 }
